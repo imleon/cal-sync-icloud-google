@@ -1,0 +1,9 @@
+# Copy to .dev.vars (git-ignored). One KEY=value per line, no quotes, no spaces.
+ICLOUD_USERNAME=you@example.com
+ICLOUD_APP_PASSWORD=xxxx-xxxx-xxxx-xxxx
+GOOGLE_CLIENT_ID=123456789012-abcdef.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=GOCSPX-...
+GOOGLE_REFRESH_TOKEN=1//...
+# Collection URLs printed by `node scripts/discover.ts calendars`
+ICLOUD_CALENDAR_URL=https://pXX-caldav.icloud.com/<dsid>/calendars/<calendar-id>/
+GOOGLE_CALENDAR_URL=https://apidata.googleusercontent.com/caldav/v2/<calendar-id>/events/

@@ -1,0 +1,21 @@
+{
+  "name": "cal-sync-icloud-google",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  // No public URL: the /run debug endpoint is only reachable via `wrangler dev`.
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": { "crons": ["* * * * *"] },
+  "d1_databases": [
+    // Replace with the id printed by `wrangler d1 create`; any value works for local dev.
+    { "binding": "DB", "database_name": "cal-sync-icloud-google", "database_id": "00000000-0000-0000-0000-000000000000" }
+  ],
+  "vars": {
+    "DRY_RUN": "1",
+    "MAX_WRITES": "20"
+  },
+  "observability": { "enabled": true }
+  // Secrets (`wrangler secret put`, or .dev.vars locally; see .dev.vars.example):
+  // ICLOUD_CALENDAR_URL, GOOGLE_CALENDAR_URL, ICLOUD_USERNAME, ICLOUD_APP_PASSWORD,
+  // GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN
+}
